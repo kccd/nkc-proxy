@@ -1,6 +1,6 @@
 # nkc-proxy
 
-一、安装与运行
+## 一、安装与运行
 ```
 # git clone https://github.com/kccd/nkc-proxy.git
 # cd nkc-proxy
@@ -9,7 +9,7 @@
 # npm run server
 ```
 
-二、配置文件说明
+## 二、配置文件
 
 项目根目录中的 `config.js` 为配置文件，代理服务在启动前会读取该文件的内容。
 
@@ -107,4 +107,17 @@ module.exports = {
 }
 
 ```
+## 三、其他说明
+由于 websocket 连接的建立和 socket.io 的 polling 模式都是基于 http 协议的，所以为了保证在以上两种情况下服务能够被正确的代理，你需要请求特殊的 URL 或设置特殊的请求头。
+
+方法 1 URL 匹配  
+```
+/^\/socket\.io\/\?/i;
+```
+方法 2 设置请求头
+```
+header['X-socket-io'] = 'polling'
+```
+
+如果 wsPass 配置存在，则符合以上条件的 http 请求将会被代理到 wsPass 列表中的某个服务（参看 wsType）。
 
