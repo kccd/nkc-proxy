@@ -108,7 +108,7 @@ module.exports = {
 
 ```
 ## 三、其他说明
-由于 websocket 连接的建立和 socket.io 的 polling 模式都是基于 http 协议的，所以为了保证在以上两种情况下服务能够被正确的代理，你需要请求特殊的 URL 或设置特殊的请求头。
+由于 websocket 连接的建立和 socket.io 的 polling 模式基于 http 协议，所以为了保证在以上两种情况下服务能够被正确的代理，你需要请求特殊的 URL 或设置特殊的请求头。
 
 方法 1 URL 匹配  
 ```
