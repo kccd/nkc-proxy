@@ -1,0 +1,7 @@
+/node_modules
+/.idea
+/.vscode
+/configs
+/certs
+/logs
+/config.js

@@ -1,0 +1,31 @@
+{
+  "name": "nkc-proxy",
+  "version": "0.0.1",
+  "description": "nkc proxy",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kccd/nkc-proxy.git"
+  },
+  "keywords": [
+    "proxy",
+    "nkc"
+  ],
+  "author": "pengxiguaa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kccd/nkc-proxy/issues"
+  },
+  "homepage": "https://github.com/kccd/nkc-proxy#readme",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "easy-monitor": "^2.2.8",
+    "farmhash": "^3.1.0",
+    "http-proxy-ws": "^1.18.4",
+    "moment": "^2.26.0",
+    "destroy": "^1.0.4"
+  }
+}
